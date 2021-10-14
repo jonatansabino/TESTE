@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teste</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <div class="topo">
+      <input type="text" id="busca" placeholder="Buscar..." />
+
+      <img src="img/logo.png" id="logo" style="height: 200%; width: 200px" />
+
+      <button id="mp">Meus Pedidos</button>
+
+      <button id="mc">Minha cesta</button>
+    </div>
+    <!-- categorias -->
+    <nav>
+      <ul>
+        <li><a href="#">Eletronicos</a></li>
+        <li><a href="#">Celulares e Telefones</a></li>
+        <li><a href="#">Informática</a></li>
+        <li><a href="#">Móveis e decoração</a></li>
+        <li><a href="#">Livros</a></li>
+      </ul>
+    </nav>
+    <!-- Banner -->
+    <div class="banner">
+      <img src="img/banner.png" style="width: 100%" />
+      <img id="um" src="img/1.png" />
+      <img id="dois" src="img/2.png" />
+      <img id="tres" src="img/3.png" />
+    </div>
+
+    <!-- Itens de amostra -->
+    <div class="card">
+      <img id="imagem" src="img/Celular.png" style="width: 100%" />
+      <h4>
+        <p>Samsung galaxy j10</p>
+        De R$ 5.000.00 por R$4.300.00
+      </h4>
+      <input
+        style="width: 4ch"
+        id="qtd"
+        class="form-control rounded-0"
+        type="number"
+        name="quantidade"
+        onchange="preencheTotalProduto()"
+        min="1"
+        max="<?= $tamanho['estoque'];?>"
+        value="0"
+      />
+      <p><button id="adn">ADICONAR AO CARRINHO</button></p>
+    </div>
+    <div class="card">
+      <img id="imagem" src="img/Computador.png" style="width: 100%" />
+      <h4>
+        <p>PC Gamer, Intel i9, 20 Ram</p>
+        De R$ 18.000.00 por R$17.300.00
+      </h4>
+      <input
+        style="width: 4ch"
+        id="qtd"
+        class="form-control rounded-0"
+        type="number"
+        name="quantidade"
+        onchange="preencheTotalProduto()"
+        min="1"
+        max="<?= $tamanho['estoque'];?>"
+        value="0"
+      />
+      <p><button id="adn">ADICONAR AO CARRINHO</button></p>
+    </div>
+    <div class="card">
+      <img id="imagem" src="img/Cozinha.png" style="width: 100%" />
+      <h4>
+        <p>Cozinha Planejada</p>
+        Dê R$ 5.000.00 por R$ 4.000.00
+      </h4>
+      <input
+        style="width: 4ch"
+        id="qtd"
+        class="form-control rounded-0"
+        type="number"
+        name="quantidade"
+        onchange="preencheTotalProduto()"
+        min="1"
+        max="<?= $tamanho['estoque'];?>"
+        value="0"
+      />
+      <p><button id="adn">ADICONAR AO CARRINHO</button></p>
+    </div>
+    <div class="card">
+      <img id="imagem" src="img/Livro.png" style="width: 100%" />
+      <h4>
+        <p>Como treinar seu dragão</p>
+        Dê R$ 200.00 por R$ 189.99
+      </h4>
+      <input
+        style="width: 4ch"
+        id="qtd"
+        class="form-control rounded-0"
+        type="number"
+        name="quantidade"
+        onchange="preencheTotalProduto()"
+        min="1"
+        max="<?= $tamanho['estoque'];?>"
+        value="0"
+      />
+      <p><button id="adn">ADICONAR AO CARRINHO</button></p>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="push"></div>
+    <footer>
+      <div id="menu" class="btn-group btn-group-vertical">
+        <h5>Quem somos:</h5>
+        <button
+          id="Insta"
+          type="button"
+          class="btn btn-danger"
+          src="img/Instagram.png"
+        >
+          Sobre a Lorem
+        </button>
+        <button id="Face" type="button" class="btn btn-danger">Premios</button>
+        <button id="Tw" type="button" class="btn btn-danger">Novidades</button>
+      </div>
+
+      <div id="menu" class="btn-group btn-group-vertical">
+        <h5>Produtos:</h5>
+        <button
+          id="Insta"
+          type="button"
+          class="btn btn-danger"
+          src="img/Instagram.png"
+        >
+          Eletrônicos
+        </button>
+        <button id="Face" type="button" class="btn btn-danger">Livros</button>
+        <button id="Tw" type="button" class="btn btn-danger">
+          Informatica
+        </button>
+      </div>
+
+      <div id="menu" class="btn-group btn-group-vertical">
+        <h5>Precisa de Ajuda?</h5>
+        <button
+          id="Insta"
+          type="button"
+          class="btn btn-danger"
+          src="img/Instagram.png"
+        >
+          Reclama aqui
+        </button>
+        <button id="Face" type="button" class="btn btn-danger">
+          Contacte-nos por telefone
+        </button>
+        <button id="Tw" type="button" class="btn btn-danger">
+          Dúvidas Técnicas/E-mail
+        </button>
+      </div>
+      <div id="social" class="btn-group btn-group-hori">
+        <h5>Redes Sociais:</h5>
+        <button id="icon">
+          <img src="img/instagram.png" style="width: 114%; height: 20px" />
+        </button>
+        Instagram
+        <button id="icon">
+          <img src="img/facebook.jpg" style="width: 115%; height: 20px" />
+        </button>
+        Facebook
+      </div>
+    </footer>
+  </body>
+</html>
